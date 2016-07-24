@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="mip_rover_lowlevel" type="mip_rover_controller" name="mip_rover_controller" respawn="true" output="screen">
+    <param name="mip_rover_config_path" value="$(find mip_rover_lowlevel)/params/wideboy_config.yaml" />
+  </node>
+</launch>

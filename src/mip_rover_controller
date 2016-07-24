@@ -1,0 +1,136 @@
+#!/usr/bin/env python
+
+import yaml
+
+import rospy
+
+from std_msgs.msg import Byte
+from sensor_msgs.msg import BatteryState
+from mip_rover_lowlevel.msg import Buttons
+from mip_rover_lowlevel.msg import MotorRate
+from mip_rover_lowlevel.msg import MotorCmd
+
+from wideboy import Interface as MipRover
+
+mip_rover = None
+battery_state_pub = None
+buttons_pub = None
+motor_rate_pub = None
+
+motor_cmd_sub = None
+yellow_led_sub = None
+green_led_sub = None
+red_led_sub = None
+
+def battery_handler(event):
+    global mip_rover
+    global battery_state_pub
+
+    cell_count, battery_millivolts, low_voltage_cutoff = mip_rover.get_battery_state()
+    low_voltage_cutoff /= 1000.0
+
+    battery_state = BatteryState()
+    battery_state.header.stamp = rospy.Time.now()
+    battery_state.header.frame_id = "battery"
+    battery_state.voltage = battery_millivolts / 1000.0
+    battery_state.current = float('nan')
+    battery_state.charge = float('nan')
+    battery_state.capacity = float('nan')
+    battery_state.design_capacity = 2.2
+    battery_state.power_supply_technology = BatteryState.POWER_SUPPLY_TECHNOLOGY_LIPO
+    if cell_count > 0:
+        battery_state.present = True
+        battery_state.percentage = (battery_state.voltage - low_voltage_cutoff) / \
+                                   ((cell_count * 4.2) - low_voltage_cutoff)
+        battery_state.power_supply_status = BatteryState.POWER_SUPPLY_STATUS_DISCHARGING
+        battery_state.power_supply_health = BatteryState.POWER_SUPPLY_HEALTH_GOOD
+        battery_state.cell_voltage = [battery_state.voltage / cell_count for _ in range(0, cell_count)]
+        battery_state.location = '0'
+        battery_state.serial_number = 'TP2100-2SPL25-1'
+    else:
+        battery_state.present = False
+        battery_state.percentage = 0.0
+        battery_state.power_supply_health = BatteryState.POWER_SUPPLY_HEALTH_UNKNOWN
+        battery_state.power_supply_status = BatteryState.POWER_SUPPLY_STATUS_UNKNOWN
+        battery_state.location = ''
+        battery_state.serial_number = ''
+
+    battery_state_pub.publish(battery_state)
+
+
+def buttons_handler(event):
+    global mip_rover
+    global buttons_pub
+
+    button_a, button_b, button_c = mip_rover.is_button_pushed()
+    if button_a or button_b or button_c:
+        buttons_msg = Buttons()
+        buttons_msg.button_a = button_a
+        buttons_msg.button_b = button_b
+        buttons_msg.button_c = button_c
+        buttons_pub.publish(buttons_msg)
+
+
+def motor_cmd_handler(msg):
+    global mip_rover
+
+    mip_rover.set_motor_speeds(msg.left_motor, msg.right_motor)
+
+
+def yellow_led_handler(msg):
+    global mip_rover
+
+    mip_rover.set_yellow_led(msg.data != 0)
+
+
+def green_led_handler(msg):
+    global mip_rover
+
+    mip_rover.set_green_led(msg.data != 0)
+
+
+def red_led_handler(msg):
+    global mip_rover
+
+    mip_rover.set_red_led(msg.data != 0)
+
+
+if __name__ == "__main__":
+    try:
+        rospy.init_node('mip_rover_controller')
+
+        params = None
+        param_path = rospy.get_param('~mip_rover_config_path')
+        print(param_path)
+        with open(param_path, 'r') as f:
+            params = yaml.load(f.read())
+        rospy.set_param('/mip_rover', params)
+
+        mip_rover = MipRover()
+
+        battery_state_pub = rospy.Publisher('mip_rover/battery', BatteryState, queue_size=10)
+        buttons_pub = rospy.Publisher('/mip_rover/buttons', Buttons, queue_size=10)
+        motor_rate_pub = rospy.Publisher('/mip_rover/motors/rates', MotorRate, queue_size=10)
+
+        motor_cmd_sub = rospy.Subscriber('/mip_rover/motors/cmd', MotorCmd, motor_cmd_handler)
+        yellow_led_sub = rospy.Subscriber('/mip_rover/leds/yellow', Byte, yellow_led_handler)
+        green_led_sub = rospy.Subscriber('/mip_rover/leds/green', Byte, green_led_handler)
+        red_led_sub = rospy.Subscriber('/mip_rover/leds/red', Byte, red_led_handler)
+
+        button_timer = rospy.Timer(rospy.Duration.from_sec(0.5), buttons_handler)
+        battery_timer = rospy.Timer(rospy.Duration.from_sec(5.0), battery_handler)
+
+        rate = rospy.Rate(50)
+        motor_rates = MotorRate()
+        motor_rates.header.frame_id = "motor_rates"
+        while not rospy.is_shutdown():
+            motor_rates.left_motor_rate, motor_rates.right_motor_rate = mip_rover.get_motor_rates()
+            motor_rates.header.stamp = rospy.Time.now()
+            motor_rate_pub.publish(motor_rates)
+            rate.sleep()
+
+        battery_timer.shutdown()
+        button_timer.shutdown()
+
+    except rospy.ROSInterruptException:
+        pass

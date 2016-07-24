@@ -1,0 +1,20 @@
+name: wideboy
+geometry:
+  l: 0.195
+  r: 0.030
+  camera: [.047, 0.084, .056]
+  imu: [0, 0, .074]
+#  imu: [0, 0, 4.4cm - 1cm + 3mm]
+#  camera: [7mm + 4cm, 8.4cm,,5cm + 3mm + 3mm]
+motors:
+  gear_ratio: 75.81
+  encoder_ratio: 12
+  max_rpm: 400
+  volts: 6
+controller:
+  leds: 3
+  buttons: 3
+  notes: 16
+  cmd_mag: 400
+
+
