@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e266affb-af59-41a1-bd5c-d8e7e541c373" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/mip_rover_lowlevel.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/launch/wideboy.launch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/msg/Buttons.msg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/msg/MotorCmd.msg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/msg/MotorRate.msg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/params/wideboy_config.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mip_rover_controller" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/wideboy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mip_rover_controller" afterPath="$PROJECT_DIR$/src/mip_rover_controller" />
     </list>
     <ignored path="mip_rover_lowlevel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +26,7 @@
       <file leaf-file-name="wideboy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wideboy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-637">
+            <state relative-caret-position="360">
               <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -51,11 +38,21 @@
       <file leaf-file-name="mip_rover_controller" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mip_rover_controller">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="293">
+              <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
               <folding>
                 <element signature="e#23#34#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Buttons.msg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/msg/Buttons.msg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,7 +80,7 @@
       <file leaf-file-name="rostime.py" pinned="false" current-in-tab="false">
         <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/rospy/rostime.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-813">
+            <state relative-caret-position="1080">
               <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
               <folding />
             </state>
@@ -93,7 +90,7 @@
       <file leaf-file-name="timer.py" pinned="false" current-in-tab="false">
         <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/rospy/timer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
+            <state relative-caret-position="3150">
               <caret line="211" column="66" selection-start-line="211" selection-start-column="66" selection-end-line="211" selection-end-column="66" />
               <folding />
             </state>
@@ -139,8 +136,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="192" />
+    <option name="x" value="65" />
+    <option name="y" value="220" />
     <option name="width" value="2077" />
     <option name="height" value="1041" />
   </component>
@@ -169,8 +166,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -407,14 +404,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="192" width="2077" height="1041" extended-state="0" />
+    <frame x="65" y="220" width="2077" height="1041" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="GfmBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18777083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -426,6 +422,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -466,7 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
           <caret line="71" column="1" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -478,23 +474,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blink-beep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blink-beep.py" />
     <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel/wideboy.py" />
-    <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel.py" />
     <entry file="file://$PROJECT_DIR$/msg/Buttons.msg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -515,7 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -527,23 +508,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blink-beep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blink-beep.py" />
     <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel/wideboy.py" />
-    <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel.py" />
     <entry file="file://$PROJECT_DIR$/msg/Buttons.msg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -564,7 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -576,14 +542,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blink-beep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blink-beep.py" />
     <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel/wideboy.py" />
     <entry file="file://$PROJECT_DIR$/scripts/blink-beep.py" />
     <entry file="file:///usr/local/lib/python2.7/dist-packages/Adafruit_GPIO/I2C.py">
@@ -604,13 +563,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WideBoy/__init__.py" />
     <entry file="file://$PROJECT_DIR$/scripts/blink-beep.py" />
-    <entry file="file://$PROJECT_DIR$/src/motor-test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/motor-test.py" />
     <entry file="file:///usr/local/lib/python2.7/dist-packages/Adafruit_GPIO/I2C.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
@@ -642,30 +595,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel/__init__.py" />
     <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel/wideboy.py" />
-    <entry file="file://$PROJECT_DIR$/msg/Buttons.msg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mip_rover_lowlevel.py" />
     <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/sensor_msgs/msg/_BatteryState.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-183">
@@ -678,18 +615,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blink-beep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blink-beep.py" />
     <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2973">
@@ -702,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,7 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,13 +652,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/rospy/rostime.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-813">
+        <state relative-caret-position="1080">
           <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
           <folding />
         </state>
@@ -740,7 +665,7 @@
     </entry>
     <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/rospy/timer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
+        <state relative-caret-position="3150">
           <caret line="211" column="66" selection-start-line="211" selection-start-column="66" selection-end-line="211" selection-end-column="66" />
           <folding />
         </state>
@@ -748,7 +673,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wideboy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-637">
+        <state relative-caret-position="360">
           <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -772,10 +697,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/msg/Buttons.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mip_rover_controller">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state relative-caret-position="293">
+          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
           <folding>
             <element signature="e#23#34#0" expanded="true" />
           </folding>

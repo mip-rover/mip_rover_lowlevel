@@ -31,7 +31,6 @@ def battery_handler(event):
 
     battery_state = BatteryState()
     battery_state.header.stamp = rospy.Time.now()
-    battery_state.header.frame_id = "battery"
     battery_state.voltage = battery_millivolts / 1000.0
     battery_state.current = float('nan')
     battery_state.charge = float('nan')
@@ -65,6 +64,7 @@ def buttons_handler(event):
     button_a, button_b, button_c = mip_rover.is_button_pushed()
     if button_a or button_b or button_c:
         buttons_msg = Buttons()
+        buttons_msg.header.stamp = rospy.Time.now()
         buttons_msg.button_a = button_a
         buttons_msg.button_b = button_b
         buttons_msg.button_c = button_c
@@ -101,7 +101,6 @@ if __name__ == "__main__":
 
         params = None
         param_path = rospy.get_param('~mip_rover_config_path')
-        print(param_path)
         with open(param_path, 'r') as f:
             params = yaml.load(f.read())
         rospy.set_param('/mip_rover', params)
