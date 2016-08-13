@@ -7,10 +7,12 @@ geometry:
 #  imu: [0, 0, 4.4cm - 1cm + 3mm]
 #  camera: [7mm + 4cm, 8.4cm,,5cm + 3mm + 3mm]
 motors:
-  gear_ratio: 75.81
-  encoder_ratio: 12
+  # True Gear Ratio (34 * 34 * 35 * 38) / (13 * 12 * 13 * 10)
+  gear_ratio: 75.8126
+  encoder_ratio: 12.0
   max_rpm: 400
-  volts: 6
+  min_volts: 0.0
+  max_volts: 6.0
 controller:
   leds: 3
   buttons: 3

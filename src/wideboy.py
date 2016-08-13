@@ -37,15 +37,11 @@ class Interface:
         # condition, and the TWI module is disabled until the interrupt can
         # be processed.
 
-        while True:
-            try:
-                self._bus.write_byte(self._i2c_addr, address)
-                byte_list = []
-                for n in range(0, size):
-                    byte_list.append(self._bus.read_byte(self._i2c_addr))
-                return struct.unpack(fmt, bytes(bytearray(byte_list)))
-            except IOError:
-                pass
+        self._bus.write_byte(self._i2c_addr, address)
+        byte_list = []
+        for n in range(0, size):
+            byte_list.append(self._bus.read_byte(self._i2c_addr))
+        return struct.unpack(fmt, bytes(bytearray(byte_list)))
 
     def write_pack(self, address, fmt, *data):
         data_array = map(ord, list(struct.pack(fmt, *data)))
@@ -73,7 +69,7 @@ class Interface:
         self.write_pack(CLEAR_MOTOR_COUNTS_ADDR, 'B', True)
 
     def get_motor_counts(self):
-        return self.read_unpack(LEFT_MOTOR_COUNT_ADDR, 8, '<LL')
+        return self.read_unpack(LEFT_MOTOR_COUNT_ADDR, 8, '<ll')
 
     def get_motor_rates(self):
         return self.read_unpack(LEFT_MOTOR_SPEED_ADDR, 4, '<HH')

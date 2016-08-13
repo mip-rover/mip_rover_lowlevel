@@ -51,6 +51,7 @@ add_message_files(
    Buttons.msg
    MotorCmd.msg
    MotorRate.msg
+   MotorPosition.msg
 )
 
 ## Generate services in the 'srv' folder
